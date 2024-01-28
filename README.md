@@ -1,3 +1,21 @@
+
+Project: Full stack development
+
+This project is to help me learn to use tools and processes
+
+technical topics: 
+Angular Frontend
+working with git
+
+
+Task:
+Build homepage with listings for a buy-and-sell site.
+We will use fake data but learn the angular code that will allow us to pull data from databases.
+
+
+
+
+
 # BuyAndSell
 START LEARNING
 
@@ -63,7 +81,6 @@ Solution: Pushed the final changes to the main branch.
 git push origin main
 
 These challenges reflect the learning process, including Git configuration checks, working with branches, setting up a remote repository, handling default branch name changes, dealing with push rejections, and deciding on pull requests. Overcoming each challenge contributes to a deeper understanding of version control and project management. Well done on navigating these hurdles!
-
 
 
 
