@@ -10,9 +10,20 @@ working with git
 
 Task:
 Build homepage with listings for a buy-and-sell site.
+
+    - /listings page lists all the listings for things people want to sell.
+
+        1. Create a component for listings page 
+            ng generate component listings-page
+        2. Create route for the listings page to display only on /listings route
+            update app routing module ts file to add a path. The root path don't start with /
+            { path: 'listings', component: ListingsPageComponent, pathMatch: 'full'}
+    - /listings/{id}  page will show details of a specific listing with that parameter.
+
 We will use fake data but learn the angular code that will allow us to pull data from databases.
 
-
+    - Create types.ts file to create a type of listing object that has attributes id , name, description and price.
+    - Create fake-data.ts that will contain the local data to use.
 
 
 
