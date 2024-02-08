@@ -18,6 +18,11 @@ Build homepage with listings for a buy-and-sell site.
         2. Create route for the listings page to display only on /listings route
             update app routing module ts file to add a path. The root path don't start with /
             { path: 'listings', component: ListingsPageComponent, pathMatch: 'full'}
+        3. Create fake listings data 
+        4. Populate the listings page with fake data
+        note: 
+        see issue with modheader extension inserting an extra div. I updated global styles sheet to style the div's and I saw one extra div with background color. Checked with Omor and he found that modHeader was inserting an extra div. The issue was not seen in safari where that extension didn't exist.
+        Also shortcut for turning lines into comments command + /
     - /listings/{id}  page will show details of a specific listing with that parameter.
 
 We will use fake data but learn the angular code that will allow us to pull data from databases.
