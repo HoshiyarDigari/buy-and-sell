@@ -20,11 +20,16 @@ Build homepage with listings for a buy-and-sell site.
             { path: 'listings', component: ListingsPageComponent, pathMatch: 'full'}
         3. Create fake listings data 
         4. Populate the listings page with fake data
+        5. Clicking on each listings routes to the listings/id path
         note: 
         see issue with modheader extension inserting an extra div. I updated global styles sheet to style the div's and I saw one extra div with background color. Checked with Omor and he found that modHeader was inserting an extra div. The issue was not seen in safari where that extension didn't exist.
         Also shortcut for turning lines into comments command + /
     - /listings/{id}  page will show details of a specific listing with that parameter.
-
+        1. generate new component ng generate component listing-details-page
+        2. create a back button to go back to the listings page
+        3. create a contact seller button to navigate to contact-seller page.
+        4. update the app-routing.module.ts file with the route for the listing details page
+        { path: 'listings/:id', component: ListingsPageComponent}
 We will use fake data but learn the angular code that will allow us to pull data from databases.
 
     - Create types.ts file to create a type of listing object that has attributes id , name, description and price.
