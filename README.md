@@ -18,6 +18,7 @@ Build homepage with listings for a buy-and-sell site.
         2. Create route for the listings page to display only on /listings route
             update app routing module ts file to add a path. The root path don't start with /
             { path: 'listings', component: ListingsPageComponent, pathMatch: 'full'}
+            The pathMatch full means it will match only on /listings and not on longer paths
         3. Create fake listings data 
         4. Populate the listings page with fake data
         5. Clicking on each listings routes to the listings/id path
@@ -28,8 +29,18 @@ Build homepage with listings for a buy-and-sell site.
         1. generate new component ng generate component listing-details-page
         2. create a back button to go back to the listings page
         3. create a contact seller button to navigate to contact-seller page.
-        4. update the app-routing.module.ts file with the route for the listing details page
-        { path: 'listings/:id', component: ListingsPageComponent}
+        4. update the app-routing.module.ts file with the route for the listing details page and to route to listings page by default
+        {{ path:'', redirectTo: '/listings', pathMatch:'full'},
+        { path: 'listings/:id', component: ListingDetailsPageComponent}
+        
+        5. added some styling for the buttons
+        6. List the details of the listing on the listing-details page.
+        7. The error "Object is possibly 'undefined'" in Angular typically occurs when TypeScript detects a situation where a variable or property might be undefined at runtime. This is TypeScript's way of helping you catch potential bugs related to null or undefined values.
+        In your case, it seems that TypeScript is warning you about a property or object that might be undefined during compilation. To handle this situation, you can use TypeScript's optional chaining operator (?.) to safely access properties that might be undefined.
+        For example, suppose you have an object listing and it's coming from a source that might be undefined initially. Instead of accessing a property directly like listing.property, you can use optional chaining like listing?.property.
+
+
+
 We will use fake data but learn the angular code that will allow us to pull data from databases.
 
     - Create types.ts file to create a type of listing object that has attributes id , name, description and price.

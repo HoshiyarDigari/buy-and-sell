@@ -6,7 +6,7 @@ h1 {
 }
 div {
     padding: 20px;
-    background-color: teal;
+    background-color: rgb(220, 207, 210);
     border: 0cap;
 }
 html {
@@ -26,6 +26,10 @@ button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 10px;
     text-align: center;
-    background-color: burlywood;
+    background-color: rgb(228, 224, 218);
 
+}
+
+p {
+    align-content: first baseline;
 }
