@@ -35,11 +35,7 @@ Build homepage with listings for a buy-and-sell site.
         
         5. added some styling for the buttons
         6. List the details of the listing on the listing-details page.
-        7. The error "Object is possibly 'undefined'" in Angular typically occurs when TypeScript detects a situation where a variable or property might be undefined at runtime. This is TypeScript's way of helping you catch potential bugs related to null or undefined values.
-        In your case, it seems that TypeScript is warning you about a property or object that might be undefined during compilation. To handle this situation, you can use TypeScript's optional chaining operator (?.) to safely access properties that might be undefined.
-        For example, suppose you have an object listing and it's coming from a source that might be undefined initially. Instead of accessing a property directly like listing.property, you can use optional chaining like listing?.property.
-
-
+        7. I got the property not defined error. Fix is to tell angular that the listing is optional at compile time and it will be defined in runtime. listing? : Listing;. The ? suffix makes the variable optional.
 
 We will use fake data but learn the angular code that will allow us to pull data from databases.
 

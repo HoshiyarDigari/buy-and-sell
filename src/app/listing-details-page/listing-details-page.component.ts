@@ -21,5 +21,8 @@ listing?: Listing;
     const id = this.route.snapshot.paramMap.get('id');
     // set the current listing to the listing with id equal to the id in URL from the fakeListings data
     this.listing = fakeListings.find(listing => listing.id === id);
+
+    // print the activated route
+    console.log(this.route);
   }
 }
