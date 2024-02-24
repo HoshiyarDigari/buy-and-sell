@@ -7,7 +7,8 @@
     <p>{{listing?.description}}</p>
     <p>${{listing?.price}}</p>
 
-    <a routerLink="/contact">
+    <!-- the button will load contact seller page with the proper listing id, which can be used by the contact seller page component to generate appropriate message  -->
+    <a routerLink="/contact/{{listing?.id}}">
         <button>Contact Seller</button>
     </a>
 </div>

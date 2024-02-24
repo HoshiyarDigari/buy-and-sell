@@ -25,6 +25,7 @@ Build homepage with listings for a buy-and-sell site.
         note: 
         see issue with modheader extension inserting an extra div. I updated global styles sheet to style the div's and I saw one extra div with background color. Checked with Omor and he found that modHeader was inserting an extra div. The issue was not seen in safari where that extension didn't exist.
         Also shortcut for turning lines into comments command + /
+
     - /listings/{id}  page will show details of a specific listing with that parameter.
         1. generate new component ng generate component listing-details-page
         2. create a back button to go back to the listings page
@@ -36,6 +37,24 @@ Build homepage with listings for a buy-and-sell site.
         5. added some styling for the buttons
         6. List the details of the listing on the listing-details page.
         7. I got the property not defined error. Fix is to tell angular that the listing is optional at compile time and it will be defined in runtime. listing? : Listing;. The ? suffix makes the variable optional.
+
+
+    - Create a contact seller page
+        1. ng generate component contact-seller-page
+        2. add route to the app routing module for the contact seller page
+            {path: '/contact/:id', component: contactsellerpagecomponent}
+        3. edit the component ts file
+            1. import the activatedroute and router from the angular router module
+            2. 3 member variables
+                email : empty string
+                message: empty string
+                listing: undefined of type Listing 
+            3. constructor function will initialize route to activatedroute , router to Router
+            4. oninit function will define the listing and a default message including the listing name
+            5. implement a sendMessage function which will alert that msg is sent and navigate back to the /listings page
+        4. Edit the component html file
+            1. input area to get the users email. this will bind to the member property variable via the [(ngmodel)] keyword. This allows 2 way binding of the html inputs with the member variables in the ts file.
+            2. a textarea for the message, prepopulated with the message from the ts file
 
 We will use fake data but learn the angular code that will allow us to pull data from databases.
 
